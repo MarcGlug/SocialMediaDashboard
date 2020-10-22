@@ -1,0 +1,84 @@
+body {
+  background-color: white;
+}
+
+body p, body h1, body h2 {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1e202a;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #63687e;
+}
+
+header {
+  background-color: #f5f7ff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: #63687e;
+}
+
+.card {
+  background-color: #f0f2fa;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  border-top: 5px solid #198ff5;
+}
+
+.card .number {
+  font-weight: bold;
+  font-size: 60px;
+  padding-bottom: 0px;
+}
+
+.card .follower {
+  font-size: 15px;
+  letter-spacing: 5px;
+  color: #63687e;
+}
+
+.cardOverview {
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+.cardOverview .number {
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 0px;
+}
+
+.text-bold {
+  font-weight: bold;
+  color: #63687e;
+}
+
+.stat {
+  color: #1db489;
+  font-weight: bold;
+}
+
+.stat img {
+  width: 10px;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=style.css.map */

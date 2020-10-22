@@ -1,0 +1,109 @@
+// -------------- FONT -----------------
+
+$font: 'Inter', sans-serif;
+
+// ------------- COLORS ----------------
+
+$red: hsl(356, 69%, 56%);
+$green: hsl(163, 72%, 41%);
+$facebook:hsl(208, 92%, 53%);
+$twitter:hsl(203, 89%, 53%);
+$instagram:linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$youtube:hsl(348, 97%, 39%);
+
+// -- LIGHT --
+$generalBGLight:hsl(0, 0%, 100%);
+$topBGLight: hsl(225, 100%, 98%);
+$toogleLight: hsl(230, 22%, 74%);
+$cardBGLight:  hsl(227, 47%, 96%);
+$cardTextLight: hsl(228, 12%, 44%);
+$cardTextLight2: hsl(230, 17%, 14%);
+
+// -- DARK --
+$generalBGDark: hsl(230, 17%, 14%);
+$topBGDark:hsl(232, 19%, 15%);
+$toogleDark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$cardBGDark: hsl(228, 28%, 20%);
+$cardTextDark:hsl(0, 0%, 100%);
+$cardTextDark2:hsl(228, 34%, 66%);
+
+body{
+    background-color: $generalBGLight;
+    p, h1, h2{
+        font-family: $font;
+    }
+}
+
+h1{
+    font-size: 25px;
+    font-weight: bold;
+    color: $cardTextLight2;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: $cardTextLight;
+}
+
+header{
+
+    background-color: $topBGLight;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.divider{
+    height:2px;
+    width:100%;
+    background-color:$cardTextLight;
+}
+
+
+.card{
+    background-color: $cardBGLight;
+    padding-top: 2rem;
+    padding-bottom:2rem;
+    border-radius: 5px;
+    border-top: 5px solid $facebook;
+    
+        .number{
+            font-weight: bold;
+            font-size: 60px;
+            padding-bottom: 0px;
+        }
+        .follower{
+            font-size: 15px;
+            letter-spacing: 5px;
+            color: $cardTextLight;
+        }
+    
+}
+
+.cardOverview{
+    background-color: $cardBGLight;
+    border-radius: 5px;
+    padding: 1.5rem;
+    .number{
+        font-weight: bold;
+        font-size: 30px;
+        padding-bottom: 0px;
+    }
+}
+
+.text-bold{
+    font-weight: bold;
+    color: $cardTextLight;
+}
+
+.stat{
+    color: $green;
+    font-weight: bold;
+
+    img{
+        width: 10px;
+        height: 5px;
+        display: flex;
+        align-self: center;
+    }
+}
