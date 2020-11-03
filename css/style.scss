@@ -28,9 +28,39 @@ $cardTextDark:hsl(0, 0%, 100%);
 $cardTextDark2:hsl(228, 34%, 66%);
 
 body{
+
     background-color: $generalBGLight;
     p, h1, h2{
         font-family: $font;
+    }
+}
+
+body.darktheme{
+
+    background-color: $generalBGDark;
+
+    h1, h2{color: $cardTextDark};
+    p, .follower{color:$cardTextDark2};
+
+    header{
+        background-color: $topBGDark;
+        label + p {color: white};
+    }
+
+    .card, .cardOverview {
+
+        background-color: $cardBGDark;
+        &:hover{filter: brightness(1.5);}
+
+        .number{
+            color: $cardTextDark;
+        }
+        .stat{
+            p{color: $green;}
+        }
+    }
+    footer{
+        color:$cardTextDark;
     }
 }
 
@@ -84,10 +114,11 @@ header{
         transition: .4s;
       }
       input:checked + .slider {
-        background-color:  rgb(73, 143, 223);
+        background-color:  rgb(73, 223, 148);
       }
       
       input:checked + .slider:before {
+        background-color:  $cardBGDark;
         -webkit-transform: translateX(29px);
         -ms-transform: translateX(29px);
         transform: translateX(29px);
@@ -102,6 +133,7 @@ header{
         border-radius: 50%;
       }
 }
+
 main{
     position:relative;
     top:-50px;

@@ -6,6 +6,47 @@ body p, body h1, body h2 {
   font-family: "Inter", sans-serif;
 }
 
+body.darktheme {
+  background-color: #1e202a;
+}
+
+body.darktheme h1, body.darktheme h2 {
+  color: white;
+}
+
+body.darktheme p, body.darktheme .follower {
+  color: #8b97c6;
+}
+
+body.darktheme header {
+  background-color: #1f212e;
+}
+
+body.darktheme header label + p {
+  color: white;
+}
+
+body.darktheme .card, body.darktheme .cardOverview {
+  background-color: #252a41;
+}
+
+body.darktheme .card:hover, body.darktheme .cardOverview:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+body.darktheme .card .number, body.darktheme .cardOverview .number {
+  color: white;
+}
+
+body.darktheme .card .stat p, body.darktheme .cardOverview .stat p {
+  color: #1db489;
+}
+
+body.darktheme footer {
+  color: white;
+}
+
 h1 {
   font-size: 25px;
   font-weight: bold;
@@ -57,10 +98,11 @@ header .slider:before {
 }
 
 header input:checked + .slider {
-  background-color: #498fdf;
+  background-color: #49df94;
 }
 
 header input:checked + .slider:before {
+  background-color: #252a41;
   -webkit-transform: translateX(29px);
   transform: translateX(29px);
 }
