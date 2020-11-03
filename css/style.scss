@@ -52,6 +52,10 @@ header{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+main{
+    position:relative;
+    top:-50px;
+}
 
 .divider{
     height:2px;
@@ -99,11 +103,17 @@ header{
 .stat{
     color: $green;
     font-weight: bold;
-
     img{
         width: 10px;
         height: 5px;
         display: flex;
         align-self: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    main{
+        top:-130px;
     }
 }
