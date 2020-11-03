@@ -22,7 +22,7 @@ $cardTextLight2: hsl(230, 17%, 14%);
 // -- DARK --
 $generalBGDark: hsl(230, 17%, 14%);
 $topBGDark:hsl(232, 19%, 15%);
-$toogleDark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$toogleDark: linear gradient rgb(80, 154, 238) to  #38da40;
 $cardBGDark: hsl(228, 28%, 20%);
 $cardTextDark:hsl(0, 0%, 100%);
 $cardTextDark2:hsl(228, 34%, 66%);
@@ -46,11 +46,61 @@ h2{
     color: $cardTextLight;
 }
 
-header{
 
+header{
+    
     background-color: $topBGLight;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+      }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $toogleLight;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 23px;
+        width: 23px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $topBGLight;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      input:checked + .slider {
+        background-color:  rgb(73, 143, 223);
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(29px);
+        -ms-transform: translateX(29px);
+        transform: translateX(29px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
 }
 main{
     position:relative;

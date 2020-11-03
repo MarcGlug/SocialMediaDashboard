@@ -22,6 +22,55 @@ header {
   background-color: #f5f7ff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  /* Rounded sliders */
+}
+
+header .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+header .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aeb3cb;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f5f7ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header input:checked + .slider {
+  background-color: #498fdf;
+}
+
+header input:checked + .slider:before {
+  -webkit-transform: translateX(29px);
+  transform: translateX(29px);
+}
+
+header .slider.round {
+  border-radius: 34px;
+}
+
+header .slider.round:before {
+  border-radius: 50%;
 }
 
 main {
