@@ -22,7 +22,7 @@ $cardTextLight2: hsl(230, 17%, 14%);
 // -- DARK --
 $generalBGDark: hsl(230, 17%, 14%);
 $topBGDark:hsl(232, 19%, 15%);
-$toogleDark: linear gradient rgb(80, 154, 238) to  #38da40;
+$toogleDark: #38da40;
 $cardBGDark: hsl(228, 28%, 20%);
 $cardTextDark:hsl(0, 0%, 100%);
 $cardTextDark2:hsl(228, 34%, 66%);
@@ -100,28 +100,33 @@ header{
         background-color: $toogleLight;
         -webkit-transition: .4s;
         transition: .4s;
+        
+        &:before{
+            position: absolute;
+            content: "";
+            height: 23px;
+            width: 23px;
+            left: 33px;
+            bottom: 4px;
+            background-color: $topBGLight;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        &:hover{
+            background-color: $toogleDark;
+        }
       }
-      
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: 23px;
-        width: 23px;
-        left: 4px;
-        bottom: 4px;
-        background-color: $topBGLight;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
+
       input:checked + .slider {
-        background-color:  rgb(73, 223, 148);
+        background-color:  $toogleDark;
       }
       
       input:checked + .slider:before {
         background-color:  $cardBGDark;
-        -webkit-transform: translateX(29px);
-        -ms-transform: translateX(29px);
-        transform: translateX(29px);
+        -webkit-transform: translateX(-29px);
+        -ms-transform: translateX(-29px);
+        transform: translateX(-29px);
       }
       
       /* Rounded sliders */
@@ -178,7 +183,7 @@ main{
     padding: 1.5rem;
 
     &:hover{
-        background-color: #e1e3f0;
+        background-color: $hover;
     }
 
     .number{

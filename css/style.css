@@ -90,21 +90,25 @@ header .slider:before {
   content: "";
   height: 23px;
   width: 23px;
-  left: 4px;
+  left: 33px;
   bottom: 4px;
   background-color: #f5f7ff;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
+header .slider:hover {
+  background-color: #38da40;
+}
+
 header input:checked + .slider {
-  background-color: #49df94;
+  background-color: #38da40;
 }
 
 header input:checked + .slider:before {
   background-color: #252a41;
-  -webkit-transform: translateX(29px);
-  transform: translateX(29px);
+  -webkit-transform: translateX(-29px);
+  transform: translateX(-29px);
 }
 
 header .slider.round {
