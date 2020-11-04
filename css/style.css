@@ -137,7 +137,6 @@ main {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 5px;
-  border-top: 5px solid #198ff5;
 }
 
 .card:hover {
@@ -154,6 +153,22 @@ main {
   font-size: 15px;
   letter-spacing: 5px;
   color: #63687e;
+}
+
+.facebook {
+  border-top: 5px solid #198ff5;
+}
+
+.instagram {
+  border-top: 5px solid #fdc468;
+}
+
+.twitter {
+  border-top: 5px solid #1ca0f2;
+}
+
+.youtube {
+  border-top: 5px solid #c4032a;
 }
 
 .cardOverview {

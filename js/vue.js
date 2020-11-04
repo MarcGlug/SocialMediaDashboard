@@ -1,7 +1,7 @@
 Vue.component('social-card', {
     props: ['social'],
     template: `
-        <div class="text-center card mx-auto">
+        <div class="text-center card mx-auto" v-bind:class="social.class">
             <div class="flex justify-center">
                 <img :src="social.logo" alt="logo facebook">  
                 <p class="ml-3 text-bold">{{social.pseudo}}</p>
@@ -28,7 +28,8 @@ var socialCard = new Vue({
                 pseudo:'@nathanf',
                 follower: '1987',
                 arrow: 'images/icon-up.svg',
-                evolution:'12'
+                evolution:'12',
+                class: 'facebook'
             },
             {
                 id:2,
@@ -36,7 +37,8 @@ var socialCard = new Vue({
                 pseudo:'@nathanf',
                 follower: '1044',
                 arrow: 'images/icon-up.svg',
-                evolution:'90'
+                evolution:'90',
+                class: 'twitter'
             },
             {
                 id:3,
@@ -44,7 +46,8 @@ var socialCard = new Vue({
                 pseudo:'@realnathanf',
                 follower: '11k',
                 arrow: 'images/icon-up.svg',
-                evolution:'1099'
+                evolution:'1099',
+                class: 'instagram'
             },
             {
                 id:4,
@@ -52,7 +55,8 @@ var socialCard = new Vue({
                 pseudo:'Nathan F.',
                 follower: '8239',
                 arrow: 'images/icon-down.svg',
-                evolution:'144'
+                evolution:'144',
+                class: 'youtube'
             }
         ]
     }
