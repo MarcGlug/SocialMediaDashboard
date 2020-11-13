@@ -98,11 +98,12 @@ header .slider:before {
 }
 
 header .slider:hover {
-  background-color: #38da40;
+  background-color: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 header input:checked + .slider {
-  background-color: #38da40;
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
 }
 
 header input:checked + .slider:before {
@@ -132,8 +133,6 @@ main {
 
 .card {
   background-color: #f0f2fa;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 5px;
@@ -159,10 +158,6 @@ main {
   border-top: 5px solid #198ff5;
 }
 
-.instagram {
-  border-top: 5px solid #fdc468;
-}
-
 .twitter {
   border-top: 5px solid #1ca0f2;
 }
@@ -171,10 +166,21 @@ main {
   border-top: 5px solid #c4032a;
 }
 
+.instagram:before {
+  content: '';
+  position: relative;
+  display: inherit;
+  width: 100%;
+  height: 5px;
+  background: -webkit-gradient(linear, right top, left top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to left, #fdc468, #df4996);
+  top: -32px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 .cardOverview {
   background-color: #f0f2fa;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
   border-radius: 5px;
   padding: 1.5rem;
 }
