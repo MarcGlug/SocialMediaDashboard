@@ -14,7 +14,7 @@ body.darktheme h1, body.darktheme h2 {
   color: white;
 }
 
-body.darktheme p, body.darktheme .follower {
+body.darktheme .follower {
   color: #8b97c6;
 }
 
@@ -39,8 +39,8 @@ body.darktheme .card .number, body.darktheme .cardOverview .number {
   color: white;
 }
 
-body.darktheme .card .stat p, body.darktheme .cardOverview .stat p {
-  color: #1db489;
+body.darktheme .text-bold {
+  color: #8b97c6;
 }
 
 body.darktheme footer {
@@ -201,7 +201,6 @@ main {
 }
 
 .stat {
-  color: #1db489;
   font-weight: bold;
 }
 
@@ -213,6 +212,14 @@ main {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.red {
+  color: #dc414c;
+}
+
+.green {
+  color: #1db489;
 }
 
 @media screen and (min-width: 1024px) {

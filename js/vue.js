@@ -11,8 +11,9 @@ Vue.component('social-card', {
                 <p class="follower">FOLLOWERS</p>
             </div>
             <div class="flex justify-center stat">
-                <img :src="social.arrow" alt="arrow up">
-                <p>{{social.evolution}} Today</p>
+                <img v-if="social.evolution.charAt(0) == '-' " src="images/icon-down.svg" alt="arrow down">
+                <img v-else src="images/icon-up.svg" alt="arrow up">
+                <p v-bind:class="{ red: social.evolution.charAt(0) =='-', green:social.evolution.charAt(0) =='+' }">{{social.evolution.substring(1)}} Today</p>
             </div>
         </div>
     `
@@ -27,8 +28,7 @@ var socialCard = new Vue({
                 logo:'images/icon-facebook.svg',
                 pseudo:'@nathanf',
                 follower: '1987',
-                arrow: 'images/icon-up.svg',
-                evolution:'12',
+                evolution:'+12',
                 class: 'facebook'
             },
             {
@@ -36,8 +36,7 @@ var socialCard = new Vue({
                 logo:'images/icon-twitter.svg',
                 pseudo:'@nathanf',
                 follower: '1044',
-                arrow: 'images/icon-up.svg',
-                evolution:'90',
+                evolution:'+90',
                 class: 'twitter'
             },
             {
@@ -45,8 +44,7 @@ var socialCard = new Vue({
                 logo:'images/icon-instagram.svg',
                 pseudo:'@realnathanf',
                 follower: '11k',
-                arrow: 'images/icon-up.svg',
-                evolution:'1099',
+                evolution:'+1099',
                 class: 'instagram'
             },
             {
@@ -54,8 +52,7 @@ var socialCard = new Vue({
                 logo:'images/icon-youtube.svg',
                 pseudo:'Nathan F.',
                 follower: '8239',
-                arrow: 'images/icon-down.svg',
-                evolution:'144',
+                evolution:'-144',
                 class: 'youtube'
             }
         ]
@@ -143,8 +140,5 @@ var overviewCard = new Vue({
 
             }
         ]
-    },
-    method:{
-
     }
 })

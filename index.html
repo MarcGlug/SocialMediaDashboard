@@ -46,8 +46,9 @@
               <div class="flex justify-between">
                 <p class="number">{{stats.stat}}</p>
                 <div class="flex stat">
-                  <img src="images/icon-up.svg" alt="arrow up">
-                  <p class="self-center" >{{stats.evolution}}</p>
+                  <img v-if="stats.evolution.charAt(0) == '-'" src="images/icon-down.svg" alt="arrow down">
+                  <img v-else src="images/icon-up.svg" alt="arrow up">
+                  <p class="self-center" v-bind:class="{ red: stats.evolution.charAt(0) =='-', green:stats.evolution.charAt(0) =='+' }">{{stats.evolution.substring(1)}}</p>
                 </div>
               </div>
             </div>

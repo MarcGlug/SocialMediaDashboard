@@ -40,7 +40,7 @@ body.darktheme{
     background-color: $generalBGDark;
 
     h1, h2{color: $cardTextDark};
-    p, .follower{color:$cardTextDark2};
+    .follower{color:$cardTextDark2};
 
     header{
         background-color: $topBGDark;
@@ -48,16 +48,16 @@ body.darktheme{
     }
 
     .card, .cardOverview {
-
         background-color: $cardBGDark;
         &:hover{filter: brightness(1.5);}
 
         .number{
             color: $cardTextDark;
         }
-        .stat{
-            p{color: $green;}
-        }
+        
+    }
+    .text-bold{
+        color: $cardTextDark2
     }
     footer{
         color:$cardTextDark;
@@ -212,7 +212,6 @@ main{
 }
 
 .stat{
-    color: $green;
     font-weight: bold;
     img{
         width: 10px;
@@ -220,6 +219,14 @@ main{
         display: flex;
         align-self: center;
     }
+}
+
+.red{
+    color: $red;
+}
+
+.green{
+    color: $green;
 }
 
 @media screen and (min-width: 1024px){
